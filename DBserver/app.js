@@ -1,55 +1,21 @@
-//express 모듈 
-var express = require('express');
-var app = express();
+var express = require("express"); 
 
-//몽고 DB 모듈  
-const MongoClient = require('mongodb').MongoClient;
-const assert = require('assert');
+var apiVersion1 = require("./routes/find.js"); 
+var apiVersion2 = require("./routes/insert.js"); 
+var apiVersion3 = require("./routes/remove.js"); 
+var apiVersion4 = require("./routes/update.js"); 
 
-// Connection URL
-const url = 'mongodb://localhost:27017';
 
-// Database Name
-const dbName = 'test';
+var app = express(); 
 
-// Use connect method to connect to the server
-MongoClient.connect(url, function(err, client) {
-  assert.equal(null, err);
-  console.log("Connected successfully to server");
+app.use("/v2",apiVersion2);
 
-  const db = client.db(dbName);
+app.use("/v1",apiVersion1);
+app.use("/v3",apiVersion3);
+app.use("/v4",apiVersion4);
 
-  
-    findDocuments(db, function() {
-      client.close();
-   
-    });
+app.listen(3000,function(){
+
+  console.log("App started DBserver API")
+
 });
-
-const findDocuments = function(db, callback) {
-  // Get the documents collection
-  const collection = db.collection('user');
-  // Find some documents
-  collection.find({}).toArray(function(err, docs) {
-    assert.equal(err, null);
-    console.log("Found the following records");
-    console.log(docs)
-    callback(docs);
-  });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
