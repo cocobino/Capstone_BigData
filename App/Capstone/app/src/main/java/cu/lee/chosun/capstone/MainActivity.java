@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Button btn = (Button)findViewById(R.id.mapsbtn);
+        Button video = (Button)findViewById(R.id.videoBtn);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,5 +25,15 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        video.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it1 = new Intent(MainActivity.this, StreamActivity.class);
+                startActivity(it1);
+                finish();
+            }
+        });
+
     }
 }
