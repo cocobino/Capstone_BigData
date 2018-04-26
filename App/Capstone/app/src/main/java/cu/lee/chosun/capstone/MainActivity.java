@@ -16,13 +16,14 @@ public class MainActivity extends AppCompatActivity {
 
         Button btn = (Button)findViewById(R.id.mapsbtn);
         Button video = (Button)findViewById(R.id.videoBtn);
+        Button dbBtn =(Button)findViewById(R.id.dbBtn);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(MainActivity.this, GeoActivity.class);
                 startActivity(it);
-                finish();
+
             }
         });
 
@@ -31,9 +32,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent it1 = new Intent(MainActivity.this, StreamActivity.class);
                 startActivity(it1);
-                finish();
+
             }
         });
 
+        dbBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it2 = new Intent(MainActivity.this, DBconn_Activity.class);
+                startActivity(it2);
+
+            }
+        });
     }
 }

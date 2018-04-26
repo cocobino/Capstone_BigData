@@ -49,7 +49,8 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".GeoActivity" />
-        <activity android:name=".StreamActivity"></activity>
+        <activity android:name=".StreamActivity" />
+        <activity android:name=".DBconn_Activity"></activity>
     </application>
 
 </manifest>
