@@ -23,9 +23,16 @@ public class DBconn_Activity extends Activity {
     String myJSON;
 
     private static final String TAG_RESULTS = "result";
-    private static final String TAG_ID = "id";
-    private static final String TAG_NAME = "name";
-    private static final String TAG_ADD = "address";
+    private static final String TAG_Bname = "Bname";
+    private static final String TAG_Btype = "Btype";
+    private static final String TAG_Bconsist = "Bconsist";
+    private static final String TAG_Bdate = "Bdate";
+    private static final String TAG_Baddr = "Baddr";
+    private static final String TAG_Bcheck = "Bcheck";
+    private static final String TAG_Bgrade = "Bgrade";
+    private static final String TAG_BLcheck = "BLcheck";
+
+
 
     JSONArray peoples = null;
     ArrayList<HashMap<String, String>> personList;
@@ -38,7 +45,7 @@ public class DBconn_Activity extends Activity {
 
         list = (ListView)findViewById(R.id.listView);
         personList = new ArrayList<HashMap<String, String>>();
-        getData("http://192.168.43.34/PHP_connection.php");
+        getData("http://192.168.0.11/PHP_connection.php");
 }
 
     protected void showList() {
@@ -48,22 +55,38 @@ public class DBconn_Activity extends Activity {
 
                         for (int i = 0; i < peoples.length(); i++) {
                                 JSONObject c = peoples.getJSONObject(i);
-                                String id = c.getString(TAG_ID);
-                                String name = c.getString(TAG_NAME);
-                                String address = c.getString(TAG_ADD);
+
+                                String Bname = c.getString(TAG_Bname);
+                                String Btype = c.getString(TAG_Btype);
+                                String Bconsist = c.getString(TAG_Bconsist);
+                                String Bdate = c.getString(TAG_Bdate);
+                                String Baddr = c.getString(TAG_Baddr);
+                                String Bcheck = c.getString(TAG_Bcheck);
+                                String Bgrade = c.getString(TAG_Bgrade);
+                                String BLcheck = c.getString(TAG_BLcheck);
+
+
+
+
 
                                 HashMap<String, String> persons = new HashMap<String, String>();
-                                            persons.put(TAG_ID, id);
-                                persons.put(TAG_NAME, name);
-                                persons.put(TAG_ADD, address);
+
+                            persons.put(TAG_Bname, Bname);
+                            persons.put(TAG_Btype, Btype);
+                            persons.put(TAG_Bconsist, Bconsist);
+                            persons.put(TAG_Bdate, Bdate);
+                            persons.put(TAG_Baddr, Baddr);
+                            persons.put(TAG_Bcheck, Bcheck);
+                            persons.put(TAG_Bgrade, Bgrade);
+                            persons.put(TAG_BLcheck, BLcheck);
 
                                 personList.add(persons);
                             }
 
                         ListAdapter adapter = new SimpleAdapter(
                                         DBconn_Activity.this, personList, R.layout.list_item,
-                                        new String[]{TAG_ID, TAG_NAME, TAG_ADD},
-                                        new int[]{R.id.id, R.id.name, R.id.address}
+                                        new String[]{TAG_Bname, TAG_Btype, TAG_Bconsist, TAG_Bdate, TAG_Baddr, TAG_Bcheck, TAG_Bgrade, TAG_BLcheck},
+                                        new int[]{R.id.Bname, R.id.Btype, R.id.Bconsist, R.id.Bdate, R.id.Bcheck, R.id.Bgrade, R.id.BLcheck}
                         );
 
                         list.setAdapter(adapter);

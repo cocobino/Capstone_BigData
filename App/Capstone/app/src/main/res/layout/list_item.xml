@@ -9,7 +9,7 @@
     android:paddingRight="10dp">
 
 <TextView
-    android:id="@+id/id"
+    android:id="@+id/Bname"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingBottom="2dip"
@@ -20,7 +20,7 @@
 
 <TextView
 
-    android:id="@+id/name"
+    android:id="@+id/Btype"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingBottom="2dip"
@@ -29,12 +29,46 @@
 
 
 <TextView
-    android:id="@+id/address"
+    android:id="@+id/Bconsist"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:gravity="left"
     android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/Bdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Baddr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Bcheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Bgrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/BLcheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textStyle="bold" />
     </LinearLayout>
 
 
