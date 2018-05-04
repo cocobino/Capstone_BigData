@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         dbBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it2 = new Intent(MainActivity.this, DBconn_Activity.class);
+                Intent it2 = new Intent(MainActivity.this, SearchActivity.class);
                 startActivity(it2);
 
             }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cu.lee.chosun.capstone.SearchActivity">
+    <TextView
+        android:id="@+id/textView_main_label"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="촬영할 건물명을 입력해주세요 . " />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editText_main_searchKeyword"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/button_main_search"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="match_parent"
+            android:text="Search" />
+
+</LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:id="@+id/listView_main_list1"/>
+
+    <TextView
+        android:id="@+id/textView_main_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4" />
+</LinearLayout>

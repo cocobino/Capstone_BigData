@@ -43,7 +43,7 @@ public class DBconn_Activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dbconn);
 
-        list = (ListView)findViewById(R.id.listView);
+        list = (ListView)findViewById(R.id.listView1);
         personList = new ArrayList<HashMap<String, String>>();
         getData("http://192.168.0.11/PHP_connection.php");
 }
@@ -64,10 +64,6 @@ public class DBconn_Activity extends Activity {
                                 String Bcheck = c.getString(TAG_Bcheck);
                                 String Bgrade = c.getString(TAG_Bgrade);
                                 String BLcheck = c.getString(TAG_BLcheck);
-
-
-
-
 
                                 HashMap<String, String> persons = new HashMap<String, String>();
 
