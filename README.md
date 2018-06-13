@@ -9,7 +9,7 @@
                 `nodeJs 8.11.1 LTS`, `mongoDB`
 <b>OSS</b> : `YOLO v3(You Only Look Once)`
 
-## 3. 프로젝트 내용
+## 3. 프로젝트 이미지
 ![screenshot](./drone.png)
 
 ## 4. 팀원 및 역할
